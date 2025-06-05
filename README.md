@@ -26,7 +26,7 @@ npm run develop
 
 ## 访问 strapi
 
-访问 http://localhost:3000/admin/，需要先用真实邮箱注册用户（默认成为 super admin）。
+访问 http://localhost:1337/admin/，需要先用真实邮箱注册用户（默认成为 super admin）。
 
 ## 访问 PostgreSQL
 
