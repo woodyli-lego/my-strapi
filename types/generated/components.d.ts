@@ -15,10 +15,22 @@ export interface CommonImageWithAlt extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonTestComponent extends Struct.ComponentSchema {
+  collectionName: 'components_common_test_components';
+  info: {
+    displayName: 'TestComponent';
+  };
+  attributes: {
+    effectiveDate: Schema.Attribute.Date;
+    order: Schema.Attribute.Integer;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'common.image-with-alt': CommonImageWithAlt;
+      'common.test-component': CommonTestComponent;
     }
   }
 }

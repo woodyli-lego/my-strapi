@@ -1,61 +1,43 @@
-# 🚀 Getting started with Strapi
+# Notes
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## 安装依赖
 
-### `develop`
-
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
-
+```bash
+npm install
 ```
+
+## 启动依赖
+
+```bash
+make infra-start
+```
+
+## 准备 .env 文件
+
+```bash
+cp .env.example .env
+```
+
+## 启动 strapi
+
+```bash
 npm run develop
-# or
-yarn develop
 ```
 
-### `start`
+## 访问 strapi
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+访问 http://localhost:3000/admin/，需要先用真实邮箱注册用户（默认成为 super admin）。
 
-```
-npm run start
-# or
-yarn start
-```
+## 访问 PostgreSQL
 
-### `build`
+通过 http://localhost:5050/browser/ 访问 pgAdmin4，观察数据结构。
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+使用下面用户名密码登录 pgAdmin4：
 
-```
-npm run build
-# or
-yarn build
-```
+- username: admin@company.com
+- password: 123456
 
-## ⚙️ Deployment
+使用以下用户名密码访问 postgres 数据库：
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+- username: postgres
+- password: 123456
